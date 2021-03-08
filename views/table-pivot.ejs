@@ -1,0 +1,35 @@
+<table class="table">
+    <tbody>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td>Full Name</td>
+                        <td>Email</td>
+                    </tr>
+                    <% items.forEach((item) => { %>
+                        <tr>
+                          <td><%= item.first_name %> <%= item.last_name %></td>
+                          <td><%= item.email %></td>
+                        </tr>
+                      <% }) %>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <% items.forEach((item) => { %>
+                            <td><%= item.item %></td>
+                        <% }) %>  
+                    </tr>
+                    <tr>
+                    <% items.forEach((item) => { %>
+                        <td><%= item.quantity %></td>
+                    <% }) %>
+                    </tr>
+                </table>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
